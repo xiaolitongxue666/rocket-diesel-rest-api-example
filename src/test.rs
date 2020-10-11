@@ -12,14 +12,12 @@ fn post_get_put_get() {
     // Add a new message with ID 1.
     let res = client.post("/message/1")
         .header(ContentType::JSON)
-        .body(r#"{ "contents": "Hello, world!" }"#)
+        .body(r#"{ "id": 1, "contents": "Hello, world!" }"#)
         .dispatch();
-
     assert_eq!(res.status(), Status::Ok);
 
     ///////////////////////////////////////////////////////////
 
-    // Check that the message exists with the correct contents.
     let mut res = client.get("/message/1").header(ContentType::JSON).dispatch();
     assert_eq!(res.status(), Status::Ok);
     let body = res.body_string().unwrap();
@@ -27,11 +25,10 @@ fn post_get_put_get() {
 
     ///////////////////////////////////////////////////////////
 
-    // Update post data
     // Change the message contents.
     let res = client.put("/message/1")
         .header(ContentType::JSON)
-        .body(r#"{ "contents": "Bye bye, world!" }"#)
+        .body(r#"{ "id": 1,  "contents": "Bye bye, world!" }"#)
         .dispatch();
 
     assert_eq!(res.status(), Status::Ok);

@@ -21,7 +21,13 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d159e035-68fe-4fb8-88b7-55de7baad9a8" name="Default Changelist" comment="" />
+    <list default="true" id="d159e035-68fe-4fb8-88b7-55de7baad9a8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.rs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +95,9 @@
       <updated>1600616135747</updated>
       <workItem from="1600616138081" duration="4202000" />
       <workItem from="1601101159416" duration="25000" />
-      <workItem from="1601103053492" duration="21293000" />
+      <workItem from="1601103053492" duration="34122000" />
+      <workItem from="1601827105129" duration="14000" />
+      <workItem from="1602078917873" duration="35589000" />
     </task>
     <servers />
   </component>
@@ -109,14 +117,42 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="594" y="204" key="#Inspections" timestamp="1601301334218">
+      <screen x="0" y="23" width="1920" height="991" />
+    </state>
+    <state x="594" y="204" key="#Inspections/0.23.1920.991/1920.-600.1080.1897@0.23.1920.991" timestamp="1601301334218" />
+    <state x="670" y="480" key="#SQL_Dialects" timestamp="1602161177485">
+      <screen x="0" y="23" width="2560" height="1349" />
+    </state>
+    <state x="376" y="355" key="#SQL_Dialects/0.23.1920.991/1920.-600.1080.1897@0.23.1920.991" timestamp="1601301337367" />
+    <state x="670" y="480" key="#SQL_Dialects/0.23.2560.1349/2560.-552.1080.1897@0.23.2560.1349" timestamp="1602161177485" />
+    <state x="747" y="242" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602161208310">
+      <screen x="0" y="23" width="2560" height="1349" />
+    </state>
+    <state x="560" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.991/1920.-600.1080.1897@0.23.1920.991" timestamp="1601297970089" />
+    <state x="747" y="242" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2560.1349/2560.-552.1080.1897@0.23.2560.1349" timestamp="1602161208310" />
+    <state x="719" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601297692939">
+      <screen x="0" y="23" width="1920" height="991" />
+    </state>
+    <state x="719" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1920.991/1920.-600.1080.1897@0.23.1920.991" timestamp="1601297692939" />
     <state x="1969" y="-13" key="SettingsEditor" timestamp="1600617072686">
       <screen x="1920" y="-600" width="1080" height="1897" />
     </state>
     <state x="1969" y="-13" key="SettingsEditor/0.23.1920.991/1920.-600.1080.1897@1920.-600.1080.1897" timestamp="1600617072686" />
-    <state x="364" y="255" width="1192" height="354" key="search.everywhere.popup" timestamp="1601106655332">
-      <screen x="0" y="23" width="1920" height="991" />
+    <state x="1093" y="618" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602214608333">
+      <screen x="0" y="23" width="2560" height="1349" />
+    </state>
+    <state x="1093" y="618" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.2560.1349/2560.-552.1080.1897@0.23.2560.1349" timestamp="1602214608333" />
+    <state x="889" y="363" width="782" height="735" key="find.popup" timestamp="1602223685538">
+      <screen x="0" y="23" width="2560" height="1349" />
+    </state>
+    <state x="667" y="273" width="586" height="490" key="find.popup/0.23.1920.991/1920.-600.1080.1897@0.23.1920.991" timestamp="1601307212535" />
+    <state x="889" y="363" width="782" height="735" key="find.popup/0.23.2560.1349/2560.-552.1080.1897@0.23.2560.1349" timestamp="1602223685538" />
+    <state x="485" y="339" width="1590" height="482" key="search.everywhere.popup" timestamp="1602161673024">
+      <screen x="0" y="23" width="2560" height="1349" />
     </state>
     <state x="2125" y="-155" width="670" height="676" key="search.everywhere.popup/0.23.1920.989/1920.-600.1080.1897@1920.-600.1080.1897" timestamp="1600619453887" />
     <state x="364" y="255" width="1192" height="354" key="search.everywhere.popup/0.23.1920.991/1920.-600.1080.1897@0.23.1920.991" timestamp="1601106655332" />
+    <state x="485" y="339" width="1590" height="482" key="search.everywhere.popup/0.23.2560.1349/2560.-552.1080.1897@0.23.2560.1349" timestamp="1602161673024" />
   </component>
 </project>

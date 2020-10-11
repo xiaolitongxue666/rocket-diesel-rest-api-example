@@ -1,21 +1,29 @@
 #![feature(proc_macro_hygiene, decl_macro)]
 #[macro_use] extern crate rocket;
 #[macro_use] extern crate rocket_contrib;
+#[macro_use] extern crate diesel;
+// #[macro_use] extern crate dotenv;
 
 #[cfg(test)] mod test;
+mod messages;
+mod schema;
+mod db;
 
 use rocket_contrib::json::{Json, JsonValue};
-use serde::{Serialize, Deserialize};
+// use serde::{Serialize, Deserialize};
+use crate::messages::Message;
 // use std::collections::HashMap;
 
 // The type to represent the ID of a message.
-type ID = usize;
+type ID = i32;
 
-#[derive(Serialize, Deserialize)]
-struct Message {
-    id: Option<ID>,
-    contents: String
-}
+// #[derive(Serialize, Deserialize)]
+// struct Message {
+//     id: Option<ID>,
+//     contents: String
+// }
+// pub mod messages;
+// pub mod db;
 
 #[post("/<id>", format = "json", data = "<message>")]
 fn new(id: ID, message: Json<Message>) -> JsonValue {
@@ -46,8 +54,9 @@ fn update(id: ID, message: Json<Message>) -> Option<JsonValue> {
 fn get(id: ID) -> Json<Message> {
     let contents = "Hello, world!";
     Json(Message {
-        id: Some(id),
-        contents: contents.to_string()
+        id: id as i32,
+        contents: contents.to_string(),
+        // published: false
     })
 }
 
