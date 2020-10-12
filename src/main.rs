@@ -13,6 +13,7 @@ use rocket_contrib::json::{Json, JsonValue};
 // use serde::{Serialize, Deserialize};
 use crate::messages::Message;
 // use std::collections::HashMap;
+use crate::db::*;
 
 // The type to represent the ID of a message.
 type ID = i32;
@@ -36,6 +37,15 @@ fn new(id: ID, message: Json<Message>) -> JsonValue {
     } else {
         //if sql don't have this post , create it and return success message
         println!("Create a new post in sql like : id[{}] , message[{}]" , id, message.0.contents);
+
+        //diesel part
+        //create message
+        let connection = establish_connection();
+        let post_message = create_message(&connection, &message.0.contents);
+        println!("\nSaved diesel post message contents {} with id {}", post_message.contents ,post_message.id);
+        //show message
+        show_messages();
+
         json!({ "status": "ok" })
     }
 }
@@ -44,6 +54,12 @@ fn new(id: ID, message: Json<Message>) -> JsonValue {
 fn update(id: ID, message: Json<Message>) -> Option<JsonValue> {
     if true {
         println!("Update a post in sql like : id[{}] , message[{}]" , id, message.0.contents);
+
+        //test delete message
+        delete_message(6);
+        //show messages
+        show_messages();
+
         Some(json!({ "status": "ok" }))
     } else {
         None

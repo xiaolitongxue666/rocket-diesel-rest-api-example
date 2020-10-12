@@ -23,10 +23,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d159e035-68fe-4fb8-88b7-55de7baad9a8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/2020-09-28-152412_messages/up.sql" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/2020-09-28-152412_messages/up.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/db.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schema.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/schema.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +63,11 @@
     <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="channel" value="DEFAULT" />
       <option name="command" value="run --package rocket-diesel-rest-api-example --bin rocket-diesel-rest-api-example" />
@@ -73,11 +78,6 @@
       <envs />
       <method v="2">
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -97,7 +97,8 @@
       <workItem from="1601101159416" duration="25000" />
       <workItem from="1601103053492" duration="34122000" />
       <workItem from="1601827105129" duration="14000" />
-      <workItem from="1602078917873" duration="35589000" />
+      <workItem from="1602078917873" duration="41711000" />
+      <workItem from="1602502908949" duration="6727000" />
     </task>
     <servers />
   </component>
@@ -143,10 +144,11 @@
       <screen x="0" y="23" width="2560" height="1349" />
     </state>
     <state x="1093" y="618" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.2560.1349/2560.-552.1080.1897@0.23.2560.1349" timestamp="1602214608333" />
-    <state x="889" y="363" width="782" height="735" key="find.popup" timestamp="1602223685538">
-      <screen x="0" y="23" width="2560" height="1349" />
+    <state x="889" y="362" width="782" height="734" key="find.popup" timestamp="1602509604610">
+      <screen x="0" y="23" width="2560" height="1346" />
     </state>
     <state x="667" y="273" width="586" height="490" key="find.popup/0.23.1920.991/1920.-600.1080.1897@0.23.1920.991" timestamp="1601307212535" />
+    <state x="889" y="362" width="782" height="734" key="find.popup/0.23.2560.1346/2560.-552.1080.1897@0.23.2560.1346" timestamp="1602509604610" />
     <state x="889" y="363" width="782" height="735" key="find.popup/0.23.2560.1349/2560.-552.1080.1897@0.23.2560.1349" timestamp="1602223685538" />
     <state x="485" y="339" width="1590" height="482" key="search.everywhere.popup" timestamp="1602161673024">
       <screen x="0" y="23" width="2560" height="1349" />

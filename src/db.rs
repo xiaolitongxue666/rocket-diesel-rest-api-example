@@ -1,8 +1,8 @@
+use crate::messages::{NewMessage, Message};
 use diesel::prelude::*;
 use dotenv::dotenv;
 use std::env;
-
-use crate::messages::{NewMessage, Message};
+use crate::schema::messages::dsl::messages;
 
 pub fn establish_connection() -> PgConnection {
     dotenv().ok();
@@ -21,4 +21,32 @@ pub fn create_message(conn: &PgConnection, contents: &str) -> Message {
         .values(&new_message)
         .get_result(conn)
         .expect("Error saving new message")
+}
+
+pub fn show_messages() {
+    // use crate::schema::messages::dsl::messages;
+
+    let connection = establish_connection();
+    let result = messages.limit(5)
+        .load::<Message>(&connection)
+        .expect("Error loading messages");
+
+    println!("Display {} messages",result.len());
+    for message in result {
+        println!("------------------------------------");
+        println!("id:{}     |     content:{}", message.id, message.contents);
+        println!("------------------------------------\n");
+    }
+}
+
+pub fn delete_message(id: i32) -> usize {
+
+    let connection = establish_connection();
+
+    let num_deleted = diesel::delete(messages.find(id))
+        .execute(&connection)
+        .expect("Error deleting messages");
+
+    println!("Deleted {} messages", num_deleted);
+    num_deleted
 }
